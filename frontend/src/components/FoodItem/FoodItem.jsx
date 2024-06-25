@@ -1,31 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
+import { StoreContext } from "../../context/StoreContext";
 
-const FoodItem = ({ key, item }) => {
-  const [itemCount, setItemCount] = useState(0);
+const FoodItem = ({ id, name, image, price, description, category }) => {
+  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
   return (
-    <div key={key} className="food-item">
+    <div key={id} className="food-item">
       <div className="food-item-image-container">
-        <img className="food-item-image" src={item.image} alt="" />
-        {!itemCount ? (
+        <img className="food-item-image" src={image} alt="" />
+        {!cartItems[id] ? (
           <img
             className="add"
-            onClick={() => setItemCount((prev) => prev + 1)}
+            onClick={() => addToCart(id)}
             src={assets.add_icon_white}
             alt=""
           />
         ) : (
           <div className="food-item-counter">
             <img
-              onClick={() => setItemCount((prev) => prev - 1)}
+              onClick={() => removeFromCart(id)}
               src={assets.remove_icon_red}
               alt=""
             />
-            <p>{itemCount}</p>
+            <p>{cartItems[id]}</p>
             <img
-              onClick={() => setItemCount((prev) => prev + 1)}
+              onClick={() => addToCart(id)}
               src={assets.add_icon_green}
               alt=""
             />
@@ -34,11 +35,11 @@ const FoodItem = ({ key, item }) => {
       </div>
       <div className="food-item-info">
         <div className="food-item-name-rating">
-          <p>{item.name}</p>
+          <p>{name}</p>
           <img src={assets.rating_starts} alt="" />
         </div>
-        <p className="food-item-desc">{item.description}</p>
-        <p className="food-item-price">${item.price}</p>
+        <p className="food-item-desc">{description}</p>
+        <p className="food-item-price">${price}</p>
       </div>
     </div>
   );
