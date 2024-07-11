@@ -3,6 +3,7 @@
 :root {
   --primary: tomato;
   --secondary: #49557e;
+  --input-color: #808080;
 }
 
 * {
