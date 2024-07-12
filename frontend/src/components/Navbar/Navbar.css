@@ -5,8 +5,9 @@
   align-items: center;
 }
 
-.navbar .logo {
+.logo {
   width: 150px;
+  color: var(--primary);
 }
 
 .navbar-menu {
@@ -66,7 +67,7 @@
 
 /* Media Queries */
 @media screen and (max-width: 1050px) {
-  .navbar .logo {
+  .logo {
     width: 140px;
   }
 
@@ -89,7 +90,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .navbar .logo {
+  .logo {
     width: 120px;
   }
 

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --primary: tomato;
+  --primary: #ff9933;
   --secondary: #49557e;
   --input-color: #808080;
   --light-gray: #e2e2e2;

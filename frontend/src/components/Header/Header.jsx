@@ -5,12 +5,13 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-contents">
-        <h2>Order your favourite food here</h2>
+        <h2>A World of Flavors at Your Fingertips</h2>
         <p>
-          Choose from the diverse menu featuring a delectable array of dishes
-          crafted with the finest ingredients and culinary expertise. Our
-          mission is to satisfy your cravings and elevate your dining
-          experience, one delicious meel at a time.
+          Order your favorite dishes from your go-to spots, or discover hidden
+          gems you never knew existed. Our app tailors recommendations to your
+          taste and dietary needs, making it easier than ever to find the
+          perfect meal. No more waiting in line or battling traffic -
+          deliciousness awaits, delivered straight to you.
         </p>
         <button>View Menu</button>
       </div>

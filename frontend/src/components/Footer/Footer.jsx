@@ -7,11 +7,11 @@ const Footer = () => {
     <footer className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          <h1 className="logo">FlavorByte</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-            minus itaque ratione impedit libero, similique rerum enim explicabo
-            architecto cupiditate.
+            Life's too short for boring meals. Explore a world of culinary
+            possibilities with <b>FlavorByte</b>. We deliver happiness, one
+            delicious bite at a time.
           </p>
           <div className="footer-social-icons">
             <img src={assets.linkedin_icon} alt="LinkedIn" />
