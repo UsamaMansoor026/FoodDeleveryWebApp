@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 4%;
+}
+
+.logo {
+  width: 150px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 5px 10px var(--primary));
+}
+
+.profile {
+  width: 40px;
+}

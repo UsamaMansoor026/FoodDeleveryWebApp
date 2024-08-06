@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import { connectToDB } from "./config/db.js"; // If we want to use ES module to import and export then we have to specify the (.js) extension with the file that we imported
 import foodRouter from "./routes/foodRoutes.js";
+import userRouter from "./routes/userRoute.js";
+
+import "dotenv/config";
 
 // App Configs
 const app = express();
@@ -18,6 +21,7 @@ connectToDB();
 // API Endpoints
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
+app.use("/api/user", userRouter);
 
 app.get("/", (req, res) => {
   res.send("API Working fine :)");
